@@ -3,8 +3,6 @@
 
 <div align="center">
 
-![Mood Music Banner](<img width="305" height="52" alt="image" src="https://github.com/user-attachments/assets/4255e3b3-79e8-43d8-895b-868a398710b9" />)
-
 ### 🎧 AI-Powered Music Discovery Based on Your Emotions
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
@@ -44,12 +42,11 @@ The interface is built with a stunning **Glassmorphism UI**, featuring 3D tilt e
 ## 👀 Glimpse of the App
 
 ### Home Screen (Dark/Light Mode)
-![Home Screen](<img width="1900" height="903" alt="image" src="https://github.com/user-attachments/assets/e216b5d4-be33-4820-b1da-da7534b48cb5" />)
-![Home Screen](<img width="1897" height="899" alt="image" src="https://github.com/user-attachments/assets/e4677643-bd37-41ca-a93f-1ca67202f643" />)
+![Home Screen](![light mode](image-2.png))
+![Home Screen](![dark mode](image-1.png))
 
 ### Music Recommendations
-![Results Screen](<img width="1448" height="847" alt="image" src="https://github.com/user-attachments/assets/70abe3e9-f8ad-4846-9298-6fbe8822b5d1" />
-)
+![Results Screen](![result ](image-3.png))
 
 ---
 
