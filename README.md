@@ -1,4 +1,4 @@
-````markdown
+
 # 🎵 Mood Music Generator 2.0
 
 <div align="center">
@@ -76,7 +76,7 @@ The interface is built with a stunning **Glassmorphism UI**, featuring 3D tilt e
 ```bash
 git clone [https://github.com/abhayshaw1601/Mood-Music-generator.git](https://github.com/abhayshaw1601/Mood-Music-generator.git)
 cd Mood-Music-generator
-````
+
 
 ### 3\. Create a Virtual Environment
 
