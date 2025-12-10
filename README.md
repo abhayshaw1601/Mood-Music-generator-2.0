@@ -1,9 +1,9 @@
-````markdown
+
 # 🎵 Mood Music Generator 2.0
 
 <div align="center">
 
-![Mood Music Banner](image_dffb95.png)
+![Mood Music Banner](<img width="305" height="52" alt="image" src="https://github.com/user-attachments/assets/4255e3b3-79e8-43d8-895b-868a398710b9" />)
 
 ### 🎧 AI-Powered Music Discovery Based on Your Emotions
 
@@ -44,10 +44,12 @@ The interface is built with a stunning **Glassmorphism UI**, featuring 3D tilt e
 ## 👀 Glimpse of the App
 
 ### Home Screen (Dark/Light Mode)
-![Home Screen](image_dffb95.png)
+![Home Screen](<img width="1900" height="903" alt="image" src="https://github.com/user-attachments/assets/e216b5d4-be33-4820-b1da-da7534b48cb5" />)
+![Home Screen](<img width="1897" height="899" alt="image" src="https://github.com/user-attachments/assets/e4677643-bd37-41ca-a93f-1ca67202f643" />)
 
 ### Music Recommendations
-![Results Screen](image_df8b53.png)
+![Results Screen](<img width="1448" height="847" alt="image" src="https://github.com/user-attachments/assets/70abe3e9-f8ad-4846-9298-6fbe8822b5d1" />
+)
 
 ---
 
@@ -76,7 +78,7 @@ The interface is built with a stunning **Glassmorphism UI**, featuring 3D tilt e
 ```bash
 git clone [https://github.com/abhayshaw1601/Mood-Music-generator.git](https://github.com/abhayshaw1601/Mood-Music-generator.git)
 cd Mood-Music-generator
-````
+
 
 ### 3\. Create a Virtual Environment
 
