@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Filter state
     let currentGenre = 'all';
 
-    const API_URL = "http://127.0.0.1:5000/get_songs";
+    const API_URL = "/get_songs";
 
     // 1.5 Initialize Dark Mode from LocalStorage
     const savedTheme = localStorage.getItem("theme");
