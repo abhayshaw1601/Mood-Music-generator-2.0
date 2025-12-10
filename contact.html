@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Mood Music</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="nav">
+        <div class="logo">Mood<span>Music</span></div>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <button id="themeToggle">🌙</button>
+    </nav>
+
+    <!-- Contact Hero Section -->
+    <section class="page-hero">
+        <h1>Get In Touch</h1>
+        <p>We'd love to hear from you</p>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-form-card">
+                <h2>Send us a Message</h2>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Choose a topic</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="bug">Bug Report</option>
+                            <option value="feature">Feature Request</option>
+                            <option value="support">Support</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span>Send Message</span>
+                        <span class="btn-icon">📧</span>
+                    </button>
+                </form>
+            </div>
+
+            <div class="contact-info-card">
+                <h2>Contact Information</h2>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">📧</div>
+                        <div class="info-content">
+                            <h4>Email</h4>
+                            <p>hello@moodmusic.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">🌐</div>
+                        <div class="info-content">
+                            <h4>Website</h4>
+                            <p>www.moodmusic.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">💬</div>
+                        <div class="info-content">
+                            <h4>Support</h4>
+                            <p>Available 24/7</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">⚡</div>
+                        <div class="info-content">
+                            <h4>Response Time</h4>
+                            <p>Within 24 hours</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <h3>Follow Us</h3>
+                    <div class="social-grid">
+                        <a href="#" class="social-link">
+                            <span>🐦</span>
+                            <span>Twitter</span>
+                        </a>
+                        <a href="#" class="social-link">
+                            <span>📘</span>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="#" class="social-link">
+                            <span>📷</span>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="#" class="social-link">
+                            <span>💼</span>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h4>How accurate is the mood detection?</h4>
+                <p>Our AI uses advanced sentiment analysis with high accuracy. It analyzes text patterns, keywords, and
+                    context to understand your emotional state.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Is Mood Music free to use?</h4>
+                <p>Yes! Mood Music is completely free. You can discover unlimited music recommendations without any
+                    cost.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Do I need a Spotify account?</h4>
+                <p>While you don't need an account to get recommendations, having Spotify allows you to play songs
+                    directly through our embedded players.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Can I suggest new features?</h4>
+                <p>Absolutely! We love hearing from our users. Use the contact form above to share your ideas and
+                    suggestions.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+    <script>
+        // Vanta.js background
+        let vantaEffect = VANTA.FOG({
+            el: "body",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            highlightColor: 0xff6b6b,
+            midtoneColor: 0x764ba2,
+            lowlightColor: 0x2a1b3d,
+            baseColor: 0x1a1a2e,
+            blurFactor: 0.6,
+            speed: 1.2,
+            scale: 1.0,
+            scaleMobile: 1.0
+        });
+
+        // Initialize theme from localStorage
+        const savedTheme = localStorage.getItem("theme");
+        const toggleBtn = document.getElementById('themeToggle');
+
+        if (savedTheme === "dark") {
+            document.body.classList.add("dark");
+            toggleBtn.textContent = "☀️";
+            // Update Vanta for dark theme
+            vantaEffect.setOptions({
+                highlightColor: 0x4ecdc4,
+                midtoneColor: 0x45b7aa,
+                lowlightColor: 0x0c0c0c,
+                baseColor: 0x000000
+            });
+        }
+
+        // Theme toggle functionality
+        toggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            const isDark = document.body.classList.contains('dark');
+            toggleBtn.textContent = isDark ? '☀️' : '🌙';
+
+            // Save theme preference
+            localStorage.setItem("theme", isDark ? "dark" : "light");
+
+            // Update Vanta colors based on theme
+            if (isDark) {
+                vantaEffect.setOptions({
+                    highlightColor: 0x4ecdc4,
+                    midtoneColor: 0x45b7aa,
+                    lowlightColor: 0x0c0c0c,
+                    baseColor: 0x000000
+                });
+            } else {
+                vantaEffect.setOptions({
+                    highlightColor: 0xff6b6b,
+                    midtoneColor: 0x4ecdc4,
+                    lowlightColor: 0x667eea,
+                    baseColor: 0x1a1a2e
+                });
+            }
+        });
+
+        // Contact form handling
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Get form data
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+
+            // Show success message (in a real app, you'd send this to a server)
+            const submitBtn = document.querySelector('.submit-btn');
+            const originalText = submitBtn.innerHTML;
+
+            submitBtn.innerHTML = '<span>Message Sent!</span><span class="btn-icon">✅</span>';
+            submitBtn.style.background = 'var(--accent)';
+
+            // Reset form after 2 seconds
+            setTimeout(() => {
+                e.target.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.style.background = '';
+            }, 2000);
+        });
+
+        // Mobile optimizations
+        const initMobileOptimizations = () => {
+            // Touch feedback
+            if ('ontouchstart' in window) {
+                document.body.classList.add('touch-device');
+                
+                // Prevent double-tap zoom
+                let lastTouchEnd = 0;
+                document.addEventListener('touchend', function (event) {
+                    const now = (new Date()).getTime();
+                    if (now - lastTouchEnd <= 300) {
+                        event.preventDefault();
+                    }
+                    lastTouchEnd = now;
+                }, false);
+                
+                // Improve form interactions on mobile
+                const inputs = document.querySelectorAll('input, select, textarea');
+                inputs.forEach(input => {
+                    input.addEventListener('focus', function() {
+                        if (window.innerWidth <= 768) {
+                            this.style.fontSize = '16px'; // Prevent zoom on iOS
+                        }
+                    });
+                });
+            }
+            
+            // Mobile device detection
+            if (window.innerWidth <= 768) {
+                document.body.classList.add('mobile-device');
+                
+                // Optimize Vanta for mobile
+                if (vantaEffect) {
+                    vantaEffect.setOptions({
+                        speed: 0.8,
+                        blurFactor: 0.4
+                    });
+                }
+            }
+            
+            // Handle orientation changes
+            window.addEventListener('orientationchange', () => {
+                setTimeout(() => {
+                    if (vantaEffect) vantaEffect.resize();
+                }, 100);
+            });
+        };
+
+        initMobileOptimizations();
+    </script>
+</body>
+
+</html>

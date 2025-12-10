@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Mood Music</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="nav">
+        <div class="logo">Mood<span>Music</span></div>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <button id="themeToggle">🌙</button>
+    </nav>
+
+    <!-- About Hero Section -->
+    <section class="page-hero">
+        <h1>About Mood Music</h1>
+        <p>Discover music that matches your emotions</p>
+    </section>
+
+    <!-- About Content -->
+    <section class="page-content">
+        <div class="content-card">
+            <div class="card-icon">🎵</div>
+            <h2>Our Mission</h2>
+            <p>Mood Music is designed to help you discover the perfect soundtrack for your emotions. Whether you're
+                feeling happy, sad, energetic, or calm, our AI-powered system analyzes your mood and recommends songs
+                that resonate with your current state of mind.</p>
+        </div>
+
+        <div class="content-card">
+            <div class="card-icon">🤖</div>
+            <h2>How It Works</h2>
+            <p>Using advanced sentiment analysis powered by NLTK's VADER sentiment analyzer, we process your mood
+                description and match it with curated music from Spotify's extensive library. Our system understands
+                nuanced emotions and provides personalized recommendations.</p>
+        </div>
+
+        <div class="content-card">
+            <div class="card-icon">🌍</div>
+            <h2>Multi-Language Support</h2>
+            <p>Enjoy music in multiple languages including English, Hindi, Punjabi, and Bengali. Our platform celebrates
+                musical diversity and helps you explore different cultures through their unique sounds and rhythms.</p>
+        </div>
+
+        <div class="content-card">
+            <div class="card-icon">🎧</div>
+            <h2>Seamless Experience</h2>
+            <p>Listen directly through embedded Spotify players or discover new music on YouTube. We provide multiple
+                ways to enjoy your personalized recommendations, making music discovery effortless and enjoyable.</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <h2>Key Features</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <span class="feature-emoji">🎯</span>
+                <h3>Mood Detection</h3>
+                <p>Advanced AI analyzes your text to understand your emotional state</p>
+            </div>
+            <div class="feature-item">
+                <span class="feature-emoji">🎵</span>
+                <h3>Spotify Integration</h3>
+                <p>Direct access to millions of songs with embedded players</p>
+            </div>
+            <div class="feature-item">
+                <span class="feature-emoji">📺</span>
+                <h3>YouTube Discovery</h3>
+                <p>Find music videos and live performances easily</p>
+            </div>
+            <div class="feature-item">
+                <span class="feature-emoji">🌐</span>
+                <h3>Multi-Platform</h3>
+                <p>Works seamlessly across different music platforms</p>
+            </div>
+            <div class="feature-item">
+                <span class="feature-emoji">🎨</span>
+                <h3>Beautiful UI</h3>
+                <p>Modern glassmorphism design with dark/light themes</p>
+            </div>
+            <div class="feature-item">
+                <span class="feature-emoji">⚡</span>
+                <h3>Fast & Responsive</h3>
+                <p>Quick recommendations powered by FastAPI backend</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="tech-section">
+        <h2>Built With</h2>
+        <div class="tech-grid">
+            <div class="tech-item">
+                <div class="tech-logo">🐍</div>
+                <h4>Python</h4>
+                <p>FastAPI Backend</p>
+            </div>
+            <div class="tech-item">
+                <div class="tech-logo">🧠</div>
+                <h4>NLTK</h4>
+                <p>Sentiment Analysis</p>
+            </div>
+            <div class="tech-item">
+                <div class="tech-logo">🎵</div>
+                <h4>Spotify API</h4>
+                <p>Music Discovery</p>
+            </div>
+            <div class="tech-item">
+                <div class="tech-logo">🌐</div>
+                <h4>JavaScript</h4>
+                <p>Interactive Frontend</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+    <script>
+        // Vanta.js background
+        let vantaEffect = VANTA.FOG({
+            el: "body",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            highlightColor: 0xff6b6b,
+            midtoneColor: 0x764ba2,
+            lowlightColor: 0x2a1b3d,
+            baseColor: 0x1a1a2e,
+            blurFactor: 0.6,
+            speed: 1.2,
+            scale: 1.0,
+            scaleMobile: 1.0
+        });
+
+        // Initialize theme from localStorage
+        const savedTheme = localStorage.getItem("theme");
+        const toggleBtn = document.getElementById('themeToggle');
+
+        if (savedTheme === "dark") {
+            document.body.classList.add("dark");
+            toggleBtn.textContent = "☀️";
+            // Update Vanta for dark theme
+            vantaEffect.setOptions({
+                highlightColor: 0x4ecdc4,
+                midtoneColor: 0x45b7aa,
+                lowlightColor: 0x0c0c0c,
+                baseColor: 0x000000
+            });
+        }
+
+        // Theme toggle functionality
+        toggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            const isDark = document.body.classList.contains('dark');
+            toggleBtn.textContent = isDark ? '☀️' : '🌙';
+
+            // Save theme preference
+            localStorage.setItem("theme", isDark ? "dark" : "light");
+
+            // Update Vanta colors based on theme
+            if (isDark) {
+                vantaEffect.setOptions({
+                    highlightColor: 0x4ecdc4,
+                    midtoneColor: 0x45b7aa,
+                    lowlightColor: 0x0c0c0c,
+                    baseColor: 0x000000
+                });
+            } else {
+                vantaEffect.setOptions({
+                    highlightColor: 0xff6b6b,
+                    midtoneColor: 0x4ecdc4,
+                    lowlightColor: 0x667eea,
+                    baseColor: 0x1a1a2e
+                });
+            }
+        });
+
+        // Mobile optimizations
+        const initMobileOptimizations = () => {
+            // Touch feedback
+            if ('ontouchstart' in window) {
+                document.body.classList.add('touch-device');
+                
+                // Prevent double-tap zoom
+                let lastTouchEnd = 0;
+                document.addEventListener('touchend', function (event) {
+                    const now = (new Date()).getTime();
+                    if (now - lastTouchEnd <= 300) {
+                        event.preventDefault();
+                    }
+                    lastTouchEnd = now;
+                }, false);
+            }
+            
+            // Mobile device detection
+            if (window.innerWidth <= 768) {
+                document.body.classList.add('mobile-device');
+                
+                // Optimize Vanta for mobile
+                if (vantaEffect) {
+                    vantaEffect.setOptions({
+                        speed: 0.8,
+                        blurFactor: 0.4
+                    });
+                }
+            }
+            
+            // Handle orientation changes
+            window.addEventListener('orientationchange', () => {
+                setTimeout(() => {
+                    if (vantaEffect) vantaEffect.resize();
+                }, 100);
+            });
+        };
+
+        initMobileOptimizations();
+    </script>
+</body>
+
+</html>

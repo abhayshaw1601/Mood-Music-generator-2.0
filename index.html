@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Music</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="filters-styles.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="nav">
+        <div class="logo">
+            Mood<span>Music</span>
+            <div class="music-bars">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <button id="themeToggle">🌙</button>
+    </nav>
+
+    <section class="intro">
+        <h1>Welcome to Mood Music</h1>
+        <p>Your go-to place for music that matches your mood.</p>
+    </section>
+
+    <!-- Quick Mood Selection -->
+    <section class="mood-buttons">
+        <h3>Quick mood selection:</h3>
+        <div class="mood-grid">
+            <button class="mood-btn" data-mood="very happy" data-tilt data-tilt-scale="1.1" data-tilt-glare
+                data-tilt-max-glare="0.3">😄 Very Happy</button>
+            <button class="mood-btn" data-mood="happy" data-tilt data-tilt-scale="1.1" data-tilt-glare
+                data-tilt-max-glare="0.3">😊 Happy</button>
+            <button class="mood-btn" data-mood="calm relaxed" data-tilt data-tilt-scale="1.1" data-tilt-glare
+                data-tilt-max-glare="0.3">😌 Calm</button>
+            <button class="mood-btn" data-mood="neutral" data-tilt data-tilt-scale="1.1" data-tilt-glare
+                data-tilt-max-glare="0.3">😐 Neutral</button>
+            <button class="mood-btn" data-mood="sad" data-tilt data-tilt-scale="1.1" data-tilt-glare
+                data-tilt-max-glare="0.3">😢 Sad</button>
+            <button class="mood-btn" data-mood="very sad" data-tilt data-tilt-scale="1.1" data-tilt-glare
+                data-tilt-max-glare="0.3">😭 Very Sad</button>
+            <button class="mood-btn" data-mood="angry" data-tilt data-tilt-scale="1.1" data-tilt-glare
+                data-tilt-max-glare="0.3">😠 Angry</button>
+        </div>
+    </section>
+
+
+    <div class="container">
+        <div class="input_section">
+            <input type="text" placeholder="Tell me something about your mood" id="moodInput">
+            <div class="links_select">
+                <select name="link" id="link-select">
+                    <option value="" disabled selected>Choose a platform</option>
+                    <option value="both">Both</option>
+                    <option value="spot">Spotify</option>
+                    <option value="yt">Youtube</option>
+                </select>
+            </div>
+            <div class="lang_select">
+                <select name="language" id="language-select">
+                    <option value="" disabled selected>Choose a language</option>
+                    <option value="random">Random</option>
+                    <option value="english">English</option>
+                    <option value="hindi">Hindi</option>
+                    <option value="punjabi">Punjabi</option>
+                    <option value="bengali">Bengali</option>
+                </select>
+            </div>
+        </div>
+        <button id="sendButton"><img src="send.png" alt="Send"></button>
+    </div>
+
+    <!-- Results -->
+    <section class="results" id="resultsSection" style="display: none;">
+        <h2>Recommended Songs</h2>
+        <div id="responseArea"></div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
