@@ -12,7 +12,7 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-f7df1e?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Spotify API](https://img.shields.io/badge/Spotify-API-1db954?style=flat-square&logo=spotify&logoColor=white)](https://developer.spotify.com)
 
-[🚀 Live Demo](#) • [📖 Documentation](#features) • [🛠️ Installation](#installation) • [🤝 Contributing](#contributing)
+[🚀 Live Demo](https://mood-music-generator-2-0.onrender.com) • [📖 Documentation](#features) • [🛠️ Installation](#installation) • [🤝 Contributing](#contributing)
 
 </div>
 
